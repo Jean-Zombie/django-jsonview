@@ -2,6 +2,7 @@ from __future__ import absolute_import, unicode_literals
 
 import logging
 import traceback
+import six
 from functools import wraps
 from importlib import import_module
 
@@ -11,7 +12,6 @@ from django.core.exceptions import PermissionDenied
 from django.core.handlers.base import BaseHandler
 from django.core.serializers.json import DjangoJSONEncoder
 from django.core.signals import got_request_exception
-from django.utils import six
 from django.utils.module_loading import import_string
 
 from .exceptions import BadRequest
